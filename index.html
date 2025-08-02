@@ -1,7 +1,409 @@
 <!DOCTYPE html>
-<html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-tr="Portfolyo - Adınız Soyadınız" data-en="Portfolio - Your Name">Portfolyo - Adınız Soyadınız</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">Portfolyo</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+                <a href="#about" class="nav-link" data-tr="Hakkımda" data-en="About">Hakkımda</a>
+                <a href="#skills" class="nav-link" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
+                <a href="#projects" class="nav-link" data-tr="Projeler" data-en="Projects">Projeler</a>
+                <a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="tr">TR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title" data-tr="Merhaba, Ben <span class='highlight'>Adınız Soyadınız</span>" data-en="Hello, I'm <span class='highlight'>Your Name</span>">Merhaba, Ben <span class="highlight">Adınız Soyadınız</span></h1>
+                <p class="hero-subtitle" data-tr="Web Developer & UI/UX Designer" data-en="Web Developer & UI/UX Designer">Web Developer & UI/UX Designer</p>
+                <p class="hero-description" data-tr="Modern web teknolojileri kullanarak kullanıcı dostu ve etkileyici web siteleri geliştiriyorum." data-en="I develop user-friendly and impressive websites using modern web technologies.">
+                    Modern web teknolojileri kullanarak kullanıcı dostu ve etkileyici web siteleri geliştiriyorum.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" data-tr="Projelerimi Gör" data-en="View My Projects">Projelerimi Gör</a>
+                    <a href="#contact" class="btn btn-secondary" data-tr="İletişime Geç" data-en="Get In Touch">İletişime Geç</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="https://via.placeholder.com/300x300/4f46e5/ffffff?text=Profil+Fotoğrafı" alt="Profil Fotoğrafı">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 data-tr="Merhaba! Ben bir Web Developer'ım" data-en="Hello! I'm a Web Developer">Merhaba! Ben bir Web Developer'ım</h3>
+                    <p data-tr="5 yıldan fazla deneyime sahip tutkulu bir web geliştiricisiyim. Modern web teknolojileri kullanarak kullanıcı deneyimini ön planda tutan, responsive ve performanslı web siteleri geliştirmeyi seviyorum." data-en="I'm a passionate web developer with over 5 years of experience. I love developing responsive and high-performance websites that prioritize user experience using modern web technologies.">
+                        5 yıldan fazla deneyime sahip tutkulu bir web geliştiricisiyim. Modern web teknolojileri 
+                        kullanarak kullanıcı deneyimini ön planda tutan, responsive ve performanslı web siteleri 
+                        geliştirmeyi seviyorum.
+                    </p>
+                    <p data-tr="HTML, CSS, JavaScript ve çeşitli framework'ler konusunda uzmanım. Sürekli öğrenmeye açık biriyim ve yeni teknolojileri takip ederek kendimi geliştiriyorum." data-en="I'm specialized in HTML, CSS, JavaScript and various frameworks. I'm always open to learning and developing myself by following new technologies.">
+                        HTML, CSS, JavaScript ve çeşitli framework'ler konusunda uzmanım. Sürekli öğrenmeye 
+                        açık biriyim ve yeni teknolojileri takip ederek kendimi geliştiriyorum.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h4>50+</h4>
+                            <p data-tr="Tamamlanan Proje" data-en="Completed Projects">Tamamlanan Proje</p>
+                        </div>
+                        <div class="stat">
+                            <h4>30+</h4>
+                            <p data-tr="Mutlu Müşteri" data-en="Happy Clients">Mutlu Müşteri</p>
+                        </div>
+                        <div class="stat">
+                            <h4>5+</h4>
+                            <p data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/400x500/6366f1/ffffff?text=Çalışma+Alanı" alt="Çalışma Alanı">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-tr="Yeteneklerim" data-en="My Skills">Yeteneklerim</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-vue"></i>
+                            <span>Vue.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>Express.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-tr="Araçlar" data-en="Tools">Araçlar</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-tr="Projelerim" data-en="My Projects">Projelerim</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all" data-tr="Tümü" data-en="All">Tümü</button>
+                <button class="filter-btn" data-filter="web" data-tr="Web" data-en="Web">Web</button>
+                <button class="filter-btn" data-filter="mobile" data-tr="Mobil" data-en="Mobile">Mobil</button>
+                <button class="filter-btn" data-filter="design" data-tr="Tasarım" data-en="Design">Tasarım</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300/8b5cf6/ffffff?text=E-Ticaret+Sitesi" alt="E-Ticaret Sitesi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-tr="E-Ticaret Sitesi" data-en="E-Commerce Website">E-Ticaret Sitesi</h3>
+                        <p data-tr="Modern tasarım ve kullanıcı dostu arayüzü olan e-ticaret platformu." data-en="E-commerce platform with modern design and user-friendly interface.">Modern tasarım ve kullanıcı dostu arayüzü olan e-ticaret platformu.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300/06b6d4/ffffff?text=Kurumsal+Website" alt="Kurumsal Website">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-tr="Kurumsal Website" data-en="Corporate Website">Kurumsal Website</h3>
+                        <p data-tr="Responsive tasarım ve SEO optimizasyonu olan kurumsal web sitesi." data-en="Corporate website with responsive design and SEO optimization.">Responsive tasarım ve SEO optimizasyonu olan kurumsal web sitesi.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Mobil+Uygulama" alt="Mobil Uygulama">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-tr="Mobil Uygulama" data-en="Mobile Application">Mobil Uygulama</h3>
+                        <p data-tr="React Native ile geliştirilmiş cross-platform mobil uygulama." data-en="Cross-platform mobile application developed with React Native.">React Native ile geliştirilmiş cross-platform mobil uygulama.</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300/f59e0b/ffffff?text=UI%2FUX+Tasarım" alt="UI/UX Tasarım">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-figma"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-tr="UI/UX Tasarım" data-en="UI/UX Design">UI/UX Tasarım</h3>
+                        <p data-tr="Kullanıcı deneyimini ön planda tutan modern arayüz tasarımları." data-en="Modern interface designs that prioritize user experience.">Kullanıcı deneyimini ön planda tutan modern arayüz tasarımları.</p>
+                        <div class="project-tech">
+                            <span>Figma</span>
+                            <span>Adobe XD</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300/ef4444/ffffff?text=Blog+Sitesi" alt="Blog Sitesi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-tr="Blog Sitesi" data-en="Blog Website">Blog Sitesi</h3>
+                        <p data-tr="Kişisel blog sitesi, içerik yönetim sistemi ile birlikte." data-en="Personal blog website with content management system.">Kişisel blog sitesi, içerik yönetim sistemi ile birlikte.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Express</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Portfolyo+Sitesi" alt="Portfolyo Sitesi">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-tr="Portfolyo Sitesi" data-en="Portfolio Website">Portfolyo Sitesi</h3>
+                        <p data-tr="Kişisel portfolyo web sitesi, animasyonlar ve etkileşimler ile." data-en="Personal portfolio website with animations and interactions.">Kişisel portfolyo web sitesi, animasyonlar ve etkileşimler ile.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-tr="İletişime Geçin" data-en="Get In Touch">İletişime Geçin</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-tr="Adres" data-en="Address">Adres</h4>
+                            <p data-tr="İstanbul, Türkiye" data-en="Istanbul, Turkey">İstanbul, Türkiye</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-tr="Telefon" data-en="Phone">Telefon</h4>
+                            <p>+90 555 123 45 67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-tr="E-posta" data-en="Email">E-posta</h4>
+                            <p>email@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" data-tr="Adınız" data-en="Your Name" placeholder="Adınız" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" data-tr="E-posta Adresiniz" data-en="Your Email" placeholder="E-posta Adresiniz" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" data-tr="Konu" data-en="Subject" placeholder="Konu" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea data-tr="Mesajınız" data-en="Your Message" placeholder="Mesajınız" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-tr="Mesaj Gönder" data-en="Send Message">Mesaj Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-tr="Adınız Soyadınız" data-en="Your Name">Adınız Soyadınız</h3>
+                    <p>Web Developer & UI/UX Designer</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-tr="Hızlı Linkler" data-en="Quick Links">Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#home" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+                        <li><a href="#about" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+                        <li><a href="#skills" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
+                        <li><a href="#projects" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+                        <li><a href="#contact" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-tr="Hizmetlerim" data-en="My Services">Hizmetlerim</h4>
+                    <ul>
+                        <li data-tr="Web Tasarım" data-en="Web Design">Web Tasarım</li>
+                        <li data-tr="Frontend Geliştirme" data-en="Frontend Development">Frontend Geliştirme</li>
+                        <li data-tr="Backend Geliştirme" data-en="Backend Development">Backend Geliştirme</li>
+                        <li data-tr="UI/UX Tasarım" data-en="UI/UX Design">UI/UX Tasarım</li>
+                        <li data-tr="Mobil Uygulama" data-en="Mobile Application">Mobil Uygulama</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-tr="&copy; 2025 Adınız Soyadınız. Tüm hakları saklıdır." data-en="&copy; 2025 Your Name. All rights reserved.">&copy; 2025 Adınız Soyadınız. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
