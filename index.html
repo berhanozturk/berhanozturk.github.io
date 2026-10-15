@@ -1,455 +1,227 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-tr="Portfolyo - Berhan Öztürk" data-en="Portfolio - Berhan Ozturk">Portfolyo - Berhan Öztürk</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berhan Öztürk — Electrical-Electronics Engineer</title>
+<meta name="description" content="Electrical-electronics engineer: industrial panel design, PLC automation, hydroelectric plant O&M, SCADA and power electronics.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --ink:#10263b; --muted:#4d6275; --line:#cfd9e0;
+  --a:#0f7c8a; --b:#e8a317; --c:#b4453a;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0b1623; --surface:#12243a; --ink:#e6eef5; --muted:#9bb0c2; --line:#25405c; --a:#4fc3d1; --b:#f0b73c; --c:#e07a6e;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--a)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:500;flex-wrap:wrap;gap:8px}
+nav a{color:var(--ink);text-decoration:none;margin-left:20px}
+nav a:hover{color:var(--a)}
+nav .logo{font-family:var(--head);font-weight:700;font-size:1.1rem;margin:0}
+.hero{padding:36px 0 56px}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;margin:0 0 20px;letter-spacing:-.02em}
+.lead{font-size:1.2rem;max-width:36em;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-weight:500;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--a)}
+.scope{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 8px}
+.scope canvas{width:100%;height:170px;display:block}
+.scope p{margin:6px 0 4px;font-size:.85rem;color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-size:1.9rem;margin:0 0 24px;letter-spacing:-.01em}
+.about{max-width:38em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{font-family:var(--head);margin:0 0 8px;font-size:1.2rem}
+.card p,.card li{color:var(--muted);font-size:.98rem}
+.card p{margin:0}
+.card ul{margin:0;padding-left:18px}
+.card.t1{border-top:4px solid var(--a)}
+.card.t2{border-top:4px solid var(--b)}
+.card.t3{border-top:4px solid var(--c)}
+.timeline{border-left:3px solid var(--line);margin:0;padding:0 0 0 24px;list-style:none}
+.timeline li{position:relative;padding-bottom:30px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-33px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--a);border:3px solid var(--bg)}
+.timeline h3{font-family:var(--head);margin:0;font-size:1.2rem}
+.timeline .meta{margin:2px 0 8px;color:var(--muted);font-size:.92rem}
+.timeline ul{margin:0;padding-left:18px;max-width:46em}
+.timeline li li{padding:0 0 4px;color:var(--ink)}
+.timeline li li::before{display:none}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:0 0 20px}
+.tags li{border:1px solid var(--line);background:var(--surface);padding:6px 14px;border-radius:99px;font-size:.95rem}
+.sub{font-family:var(--head);font-size:1.05rem;margin:22px 0 10px}
+.plain{margin:0;padding-left:18px}
+.plain li{margin-bottom:6px}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.contact a{display:inline-block;margin-right:20px;font-weight:500}
+</style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Berhan Öztürk</a>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
-                <a href="#about" class="nav-link" data-tr="Hakkımda" data-en="About">Hakkımda</a>
-                <a href="#skills" class="nav-link" data-tr="Yetenekler" data-en="Skills">Yetenekler</a>
-                <a href="#projects" class="nav-link" data-tr="Projeler" data-en="Projects">Projeler</a>
-                <a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a>
-            </div>
-            <div class="language-selector">
-                <button class="lang-btn active" data-lang="tr">TR</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+<div class="wrap">
+  <nav aria-label="Main">
+    <p class="logo">B. Öztürk</p>
+    <div><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a><a href="tr.html" hreflang="tr" lang="tr">TR</a></div>
+  </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" data-tr="Merhaba, Ben <span class='highlight'>Berhan Öztürk</span>" data-en="Hello, I'm <span class='highlight'>Berhan Ozturk</span>">Merhaba, Ben <span class="highlight">Berhan Öztürk</span></h1>
-                <p class="hero-subtitle" data-tr="Elektrik - Elektronik Mühendisi" data-en="Electrical - Electronic Engineer">Electrical - Electronic Engineer</p>
-                <p class="hero-description" data-tr="Donanım tasarımı, güç elektroniği ve yenilenebilir enerji kaynaklarıyla ilgileniyorum." data-en="I work on hardware design, power electronics, and renewable energy systems.">
-                    Donanım tasarımı, güç elektroniği ve yenilenebilir enerji kaynaklarıyla ilgileniyorum.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary" data-tr="Projelerimi Gör" data-en="View My Projects">Projelerimi Gör</a>
-                    <a href="#contact" class="btn btn-secondary" data-tr="İletişime Geç" data-en="Get In Touch">İletişime Geç</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/berhanozturk" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/berhanozturk/" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="./images/CV.pdf" class="social-link">CV</a>
-                    <a href="./images/POR.pdf" class="social-link">PR</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-image">
-                        <img src="./images/berhan.jpeg" alt="Profil Fotoğrafı">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <header class="hero">
+    <h1>Berhan Öztürk<br>Electrical-Electronics Engineer</h1>
+    <p class="lead">I design industrial control panels, commission machines and automation systems, and have worked on hydroelectric plant operations, SCADA and power electronics.</p>
+    <div class="btns">
+      <a class="btn primary" href="#experience">See my experience</a>
+      <a class="btn" href="#contact">Get in touch</a>
+    </div>
+    <div class="scope" aria-hidden="true">
+      <canvas id="scope"></canvas>
+      <p>Three-phase supply, 120° apart. Move your mouse over it to change the frequency.</p>
+    </div>
+  </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3 data-tr="Merhaba! Ben Donanım Tasarım Mühendisiyim" data-en="Hello! I'm a Hardware Design Engineer"></h3>
-                    <p data-tr="Trakya Üniversitesi Elektrik-Elektronik Mühendisliği bölümünden mezun oldum. Üniversite hayatım boyunca kendimi sadece teorik bilgiyle sınırlamadım; gömülü sistemler, donanım tasarımı, güç elektroniği ve yenilenebilir enerji gibi alanlarda aktif projeler geliştirdim.
+  <section id="about">
+    <h2>About</h2>
+    <div class="about">
+      <p>I'm an electrical-electronics engineer based in Istanbul. I prepared wiring projects for machines installed in industrial factories and electrical projects for PLC control panels using AutoCAD and EPLAN, and I have hands-on experience in commissioning, machine maintenance and fault finding.</p>
+      <p>I graduated from Trakya University in 2025. I'm also interested in solar power plants and keep learning new technologies.</p>
+    </div>
+  </section>
 
-Enerji sektörüne olan ilgim sayesinde Akenerji Hidroelektrik Santrali'nde staj yaptım. Bu süreç, sahadaki mühendislik deneyimimi artırırken sürdürülebilirliğe olan bakış açımı da pekiştirdi. Aynı zamanda güneş enerjili powerbank gibi uygulamalı projelerle pratik becerilerimi geliştirdim.
+  <section id="focus">
+    <h2>What I work on</h2>
+    <div class="grid">
+      <div class="card t1"><h3>Panel and electrical design</h3><p>Control panels, motor wiring and cable tray drawings in EPLAN and AutoCAD Electrical.</p></div>
+      <div class="card t2"><h3>Automation and commissioning</h3><p>Delta PLC and HMI design, plus commissioning and maintenance of turnkey industrial plants.</p></div>
+      <div class="card t3"><h3>Energy and power electronics</h3><p>Hydroelectric plant O&amp;M with SCADA, solar power plant study, and flyback converter design.</p></div>
+    </div>
+  </section>
 
-" data-en="I'm an Electrical & Electronics Engineering graduate from Trakya University. I specialize in hardware design, embedded systems, power electronics, and renewable energy technologies. Rather than staying in the theoretical zone, I’ve been hands-on with real-world projects throughout my education.
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li>
+        <h3>Electrical-Electronics Engineer, Multigrain A.S</h3>
+        <p class="meta">Sep 2025 – Sep 2026</p>
+        <ul>
+          <li>Ran electrical panel processes using EPLAN.</li>
+          <li>Drew site installation, motor wiring and cable tray projects in AutoCAD.</li>
+          <li>Designed and commissioned factory automation systems with Delta PLC.</li>
+          <li>Took part in commissioning the electrical systems and machines of turnkey industrial plants.</li>
+          <li>Carried out periodic maintenance and fault finding on machines (O&amp;M and technical service).</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Engineering Intern, Mutlusan (R&amp;D hardware design)</h3>
+        <p class="meta">Jun 2025 – Jul 2025</p>
+        <ul>
+          <li>Completed my compulsory summer internship in the hardware design department.</li>
+          <li>Designed a flyback converter circuit, including calculations and component selection.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Co-founder, Behoove Technology</h3>
+        <p class="meta">Jan 2024 – Apr 2025</p>
+        <ul>
+          <li>Co-founded a five-person startup building autonomous delivery technologies.</li>
+          <li>Responsible for electronics: sensor integration, power management and microcontroller-based control circuits.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Engineering Intern, Akenerji Uluabat Hydroelectric Plant</h3>
+        <p class="meta">Aug 2024 – Sep 2024</p>
+        <ul>
+          <li>Made field observations on energy production and switchyard control as part of plant O&amp;M.</li>
+          <li>Took part in daily production analysis, maintenance and monitoring through SCADA systems.</li>
+          <li>Supported the technical team with equipment maintenance.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 
-	During my internship at Akenerji Hydroelectric Power Plant, I gained valuable field experience in energy systems and deepened my understanding of sustainable infrastructure. I've also built practical solutions such as a solar-powered powerbank from scratch. 
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card t3"><h3>Universal-input flyback SMPS</h3><p>Flyback converter circuit with an 85–265 V AC input and a 24 V, 2.5 A output.</p></div>
+      <div class="card t2"><h3>Solar portable charger</h3><p>Solar-powered portable charger application, presented at the ASES International Academic Research Congress 2025.</p></div>
+      <div class="card t1"><h3>Space-based solar power</h3><p>Study of the working principles and benefits of space-based solar power plants.</p></div>
+    </div>
+  </section>
 
-	As a founder of Behoove Technology, I took part in the development of an autonomous delivery vehicle, gaining firsthand experience in team coordination, R&D, and full-stack hardware integration."></p>
-                    <p data-tr="Bununla kalmadım; Behoove Technology adında otonom teslimat aracı geliştirdiğimiz bir girişimde kurucu olarak yer aldım. Takım yönetimi, Ar-Ge süreci ve sistem entegrasyonu gibi konularda ciddi tecrübe kazandım.
+  <section id="skills">
+    <h2>Skills, education and more</h2>
+    <p class="sub">Tools and skills</p>
+    <ul class="tags">
+      <li>EPLAN</li><li>AutoCAD Electrical</li><li>ETAP</li><li>Delta PLC</li><li>HMI design</li><li>Commissioning</li><li>Fault diagnosis</li><li>Maintenance</li><li>SCADA</li><li>Turkish (native)</li><li>English (B2)</li>
+    </ul>
+    <p class="sub">Education</p>
+    <ul class="plain"><li>B.Sc. Electrical-Electronics Engineering, Trakya University, 2020 – 2025 (GPA 3.05/4.00)</li></ul>
+    <p class="sub">Certificates and courses</p>
+    <ul class="plain">
+      <li>Ultimate Electrical Power System Engineering Masterclass (Udemy)</li>
+      <li>Building a 1 MW Solar Power Plant from Scratch (Udemy)</li>
+      <li>A–Z Solar Power Plant Project Drawing (Udemy)</li>
+      <li>Networking Basics (Cisco)</li>
+    </ul>
+    <p class="sub">Volunteer work</p>
+    <ul class="plain">
+      <li>Trakya University IEEE TAES unmanned aerial vehicle team: communication systems and avionics lead</li>
+      <li>Trakya University Deep Learning and IoT Club: vice president and robotics coding instructor</li>
+      <li>Trakya University Entrepreneurship Club: technology and R&amp;D team lead</li>
+    </ul>
+  </section>
 
-Ancak asıl yönümü Mutlusan'da yaptığım staj sırasında buldum: Donanım tasarım mühendisliği. Şu an tüm odağımı bu alana vererek; PCB tasarımı, güç elektroniği ve donanım odaklı AR-GE süreçlerinde kendimi geliştiriyorum. Karmaşık sistemleri çözümleyip sadeleştirmeyi, ihtiyaca yönelik optimize donanımlar üretmeyi seviyorum. Mühendisliğe olan bakış açım, sahada çalışıp masada tasarlayabilen, gerçek sorunlara gerçek çözümler üreten bir çizgide ilerliyor." data-en="However, I found my true passion during my internship at Mutlusan: hardware design engineering. Since then, I’ve been fully focused on this field—improving myself in PCB design, embedded systems, power electronics, and hardware-driven R&D.
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="contact">
+      <a href="mailto:berhanoztrk@gmail.com">berhanoztrk@gmail.com</a>
+      <a href="https://www.linkedin.com/in/berhanozturk" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/berhanozturk" rel="noopener">GitHub</a>
+    </p>
+  </section>
 
-I enjoy breaking down complex systems into simple, efficient solutions and designing hardware that directly addresses real-world problems. My engineering approach is rooted in being both hands-on and design-oriented—building practical, optimized solutions from the ground up."></p>
-                    
-                </div>
-                 <div class="about-stats">
-                        <div class="stat">
-                            <h4>4</h4>
-                            <p data-tr="Tamamlanan Proje" data-en="Completed Projects">Tamamlanan Proje</p>
-                        </div>
-                        <div class="stat">
-                            <h4>2</h4>
-                            <p data-tr="Yayınlar" data-en="Publication">Yayınlar</p>
-                        </div>
-                        <div class="stat">
-                            <h4>1</h4>
-                            <p data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</p>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    </section>
+  <footer>© <span id="yr"></span> Berhan Öztürk · Istanbul, Türkiye</footer>
+</div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title" data-tr="Yeteneklerim" data-en="My Skills"></h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 data-tr="Teknik Bilgiler" data-en="Technical Skills">Teknik Bilgiler</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fa fa-pencil"></i>
-                            <span data-tr="PCB Tasarım" data-en="PCB Design">PCB Tasarım</span>
-                        </div>
-			<div class="skill-item">
-                            <i class="fa fa-bolt"></i>
-                            <span data-tr="Güç Elektroniği" data-en="Power Electronics">Güç Elektroniği</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa fa-sun"></i>
-                            <span data-tr="Güneş Enerjisi" data-en="Solar Energy">Güneş Enerjisi</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa fa-water"></i>
-                            <span data-tr="Hidroelektrik Enerji" data-en="Hydroelectric Energy">Hidroelektrik Enerji</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-c"></i>
-                            <span>C</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fa fa-code"></i>
-                            <span>VHDL</span>
-                        </div>
-			<div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 data-tr="Araçlar" data-en="Tools">Araçlar</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fas fa-microchip"></i>
-                            <span>Kicad</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-microchip"></i>
-                            <span>Altium Designer</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-line"></i>
-                            <span>LTSpice</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>GMT Suit</span>
-                        </div>
-			<div class="skill-item">
-                            <i class="fab fa-linux"></i>
-                            <span>Linux</span>
-                        </div>
-			<div class="skill-item">
-                            <i class="fas fa-memory"></i>
-                            <span>Questa Intel</span>
-                        </div>
-			<div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>Keil Microvision</span>
-                        </div>
-			<div class="skill-item">
-                            <i class="fas fa-cube"></i>
-                            <span>STM CUBE IDE</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3 data-tr="Diller" data-en="Languages">Diller</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="flag-icon">🇹🇷</span>
-                            <span data-tr="Türkçe - Anadil" data-en="Turkish - Native">Türkçe - Anadil</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="flag-icon">🇺🇸</span>
-                            <span data-tr="İngilizce - B2" data-en="English - B2">İngilizce - B2</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="flag-icon">🇩🇪</span>
-                            <span data-tr="Almanca - A1" data-en="German - A1">Almanca - A1</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title" data-tr="Projelerim" data-en="My Projects">Projelerim</h2>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all" data-tr="Tümü" data-en="All">Tümü</button>
-                <button class="filter-btn" data-filter="Projects" data-tr="Projelerim" data-en="Projects">Projelerim</button>
-                <button class="filter-btn" data-filter="Publication" data-tr="Yayınlar" data-en="Publication">Yayınlar</button>
-                <button class="filter-btn" data-filter="University" data-tr="Öğrenci Toplulukları" data-en="University">Öğrenci Toplulukları</button>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card" data-category="Projects">
-                    <div class="project-image">
-                        <img src="./images/flyback.png" alt="Flyback">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                
-                                <a href="https://github.com/berhanozturk/SMPS-Flyback" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="60W SMPS Flyback Converter" data-en="60W SMPS Flyback Converter">60W SMPS Flyback Converter</h3>
-                        <p data-tr="85-265 VAC girişli 24V 2.5A çıkışlı SMPS Flyback Konvertörü" data-en="input: 85-265 VAC, output: 24V 2.5A SMPS Flyback Converter">85-265 VAC girişli 24V 2.5A çıkışlı SMPS Flyback Konvertörü.</p>
-                        <div class="project-tech">
-                            <span>PCB Tasarım</span>
-                            <span>Güç Elektroniği</span>
-                            <span>Kicad</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="Projects">
-                    <div class="project-image">
-                        <img src="./images/forward.png" alt="Forward">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                
-                                <a href="https://medium.com/@berhanoztrk/off-line-forward-converter-1-f44d987a1a94" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="Off-Line Forward Converter" data-en="Off-Line Forward Converter">Off-Line Forward Converter</h3>
-                        <p data-tr="85-265 VAC girişli 12V 5A çıkışlı Fordward Konvertörü" data-en="input: 85-265 VAC, output: 12V 5A Forward Converter">85-265 VAC girişli 12V 5A çıkışlı Forward Konvertörü.</p>
-                        <div class="project-tech">
-                            <span>PCB Tasarım</span>
-                            <span>Güç Elektroniği</span>
-                            <span>Kicad</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="Projects">
-                    <div class="project-image">
-                        <img src="./images/sokkoruma.png" alt="Şok Koruma Devresi">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/berhanozturk/Shock-Protection/blob/main/README.md" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="Şok Koruma Devresi" data-en="Electric Shock Protection Circuit">Şok Koruma Devresi</h3>
-                        <p data-tr="Tersine mühendislik yaparak hazır bir şok koruma devresinin incelemesi yapılarak şematiği çıkarıldı." data-en="A reverse engineering study was conducted on a pre-built electric shock protection circuit, and its schematic was extracted.</p>
-                        <div class="project-tech">
-                            <span>PCB Tasarım</span>
-                            <span>Kicad</span>
-                        </div>
-                    </div>
-                
-
-                <div class="project-card" data-category="Projects">
-                    <div class="project-image">
-                        <img src="./images/gunes.png" alt="Güneş Paneli ile Çalışan Powerbank">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="./images/ASES.pdf" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="Güneş Paneli ile Çalışan Powerbank" data-en="APPLICATION OF A SOLAR-POWERED PORTABLE CHARGER">Güneş Paneli ile Çalışan Powerbank</h3>
-                        <p data-tr="Akademik makale olarak sunulmuş, dergide yayınlanmış uygulamalı bir enerji projesidir." data-en="This is an applied energy project that was formally presented as a research paper and published in a peer-reviewed journal.">Akademik makale olarak sunulmuş, dergide yayınlanmış uygulamalı bir enerji projesidir.</p>
-                        <div class="project-tech">
-                            <span>Güneş Enerjisi</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="Projects">
-                    <div class="project-image">
-                        <img src="./images/iha.png" alt="IHA">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link"><i class="fas fa-eye"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="İnsansız Hava Aracı" data-en="UAV">İnsansız Hava Aracı</h3>
-                        <p data-tr="2023 - 2025 arasında Trakya Üniversitesi IEEE çatısı altında kurulan İHA ekibi TAES TEAM üyeliği yaptım. Burada Haberleşme Sistemlerinden ve elektrik işlemlerinden sorumluydum." data-en="Between 2023 and 2025, I was a member of the TAES TEAM, an unmanned aerial vehicle (UAV) team founded under the IEEE branch at Trakya University. I was responsible for communication systems and electrical operations within the team.">2023 - 2025 arasında Trakya Üniversitesi IEEE çatısı altında kurulan İHA ekibi TAES TEAM üyeliği yaptım. Burada Haberleşme Sistemlerinden ve elektrik işlemlerinden sorumluydum.</p>
-                        <div class="project-tech">
-                            <span>Pixhawk</span>
-                            <span>UAV</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="Publication">
-                    <div class="project-image">
-                        <img src="./images/makale.png" alt="Makale">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://evrimagaci.org/uzay-tabanli-gunes-enerjisi-santralleri-nasil-calisir-ve-faydalari-nelerdir-10338" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="Uzay Tabanlı Güneş Enerjisi Santralleri Nasıl Çalışır ve Faydaları Nelerdir?" data-en="How Space-Based Solar Power Plants Work and What Their Benefits Are">Uzay Tabanlı Güneş Enerjisi Santralleri Nasıl Çalışır ve Faydaları Nelerdir?</h3>
-                        <p data-tr="Bu çalışmada, uzayda güneş enerjisinin toplanıp dünyaya kablosuz olarak aktarılmasını amaçlayan uzay tabanlı güneş enerjisi sistemleri incelenmiştir. Enerji üretiminden, yüksek frekanslı radyo dalgalarının dünyaya iletim sürecine ve rectenna aracılığıyla elektriğe dönüştürülmesine kadar tüm teknik süreçler araştırılmıştır. Gelecekte yüksek verimli ve sürdürülebilir enerji üretimi için umut vadeden bir teknoloji olması sebebiyle değerlendirilmiştir." data-en="This study investigates space-based solar power (SBSP) systems, which aim to collect solar energy in space and transmit it wirelessly to Earth. The research covers the entire technical process — from energy generation, the transmission of high-frequency radio waves to Earth, to their conversion into electricity via rectennas. SBSP is evaluated as a promising technology for high-efficiency and sustainable energy production in the future.">Bu çalışmada, uzayda güneş enerjisinin toplanıp dünyaya kablosuz olarak aktarılmasını amaçlayan uzay tabanlı güneş enerjisi sistemleri incelenmiştir. Enerji üretiminden, yüksek frekanslı radyo dalgalarının dünyaya iletim sürecine ve rectenna aracılığıyla elektriğe dönüştürülmesine kadar tüm teknik süreçler araştırılmıştır. Gelecekte yüksek verimli ve sürdürülebilir enerji üretimi için umut vadeden bir teknoloji olması sebebiyle değerlendirilmiştir.</p>
-                        <div class="project-tech">
-                            <span>Güneş Enerjisi</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="University">
-                    <div class="project-image">
-                        <img src="./images/2023.png" alt="Robotik Kodlama Eğitimi">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.instagram.com/p/CzyoxOVqj3H/?igsh=c3V6NGR4YWR5aGVw" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="2023 Robotik Kodlama Eğitimi" data-en="2023 Robotic Coding Lessons">2023 Robotik Kodlama Eğitimi</h3>
-                        <p data-tr="Başkan yardımcılığı görevini üstlendiğim IoT Topluluğu olarak düzenlediğimiz eğitim. İçerik hazırlayıcısı, koordinatör ve eğitmen olarak görev aldım." data-en="As the Vice President of the IoT Community, I organized a training program where I served as the content developer, coordinator, and instructor.">Başkan yardımcılığı görevini üstlendiğim IoT Topluluğu olarak düzenlediğimiz eğitim. İçerik hazırlayıcısı, koordinatör ve eğitmen olarak görev aldım.</p>
-                        <div class="project-tech">
-                            <span>Arduino</span>
-                            <span>Eğitmenlik</span>
-                            <span>Sunum</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="University">
-                    <div class="project-image">
-                        <img src="./images/robotik.png" alt="Blog Sitesi">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.instagram.com/p/Cl4Apczqw38/?igsh=aHZoOTg0MWdqcTRx" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="2022 Robotik Kodlama Eğitimi" data-en="2022 Robotic Coding Lessons">2022 Robotik Kodlama Eğitimi</h3>
-                        <p data-tr="IoT Topluluğu olarak düzenlediğimiz eğitim. Eğitmen yardımcısı olarak görev aldım." data-en="I took part as an assistant instructor in a training program organized by the IoT Community.">IoT Topluluğu olarak düzenlediğimiz eğitim. Eğitmen yardımcısı olarak görev aldım.</p>
-                        <div class="project-tech">
-                            <span>Arduino</span>
-                            <span>Ekip Çalışması</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="University">
-                    <div class="project-image">
-                        <img src="./images/ai.png" alt="AI ve MIDJOURNEY Sunumu">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.instagram.com/p/Cj8nnrDK6wo/?igsh=MXYwZTR6YTA2N2ptag==" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="Yapay Zeka ve MIDJOURNEY Sunumu" data-en="AI and MIdjourney">Yapay Zeka ve MIDJOURNEY Sunumu</h3>
-                        <p data-tr="Arge ve Teknoloji ekibi liderliğini üstlendiğim Girişimcilik Topluluğu olarak yapay zeka temellerini ve ai araçları hakkında sunum yaptım." data-en="As the R&D and Technology Team Lead of the Entrepreneurship Community, I delivered a presentation on the fundamentals of artificial intelligence and AI tools.">Arge ve Teknoloji ekibi liderliğini üstlendiğim Girişimcilik Topluluğu olarak yapay zeka temellerini ve ai araçları hakkında sunum yaptım.</p>
-                        <div class="project-tech">
-                            <span>Sunum</span>
-                            <span>AI</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card" data-category="University">
-                    <div class="project-image">
-                        <img src="./images/veribilimi.png" alt="Veri Bilimi Temelleri">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://www.instagram.com/p/Cj8nnrDK6wo/?igsh=MXYwZTR6YTA2N2ptag==" class="project-link"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 data-tr="Veri Bilimi Temelleri" data-en="Basic Data Science">Veri Bilimi Temelleri</h3>
-                        <p data-tr="Girişimcilik Topluluğu Ar-Ge ve Teknoloji ekibi liderliği üstlendiğim bu süreçte veri bilimi temelleri eğitimi verdim. Eğitimde pandas, matplotlib ve numpy kütüphaneleri kullandık." data-en="During my time as the R&D and Technology Team Lead of the Entrepreneurship Community, I conducted a training on the fundamentals of data science. The training covered key Python libraries such as Pandas, Matplotlib, and NumPy.">Arge ve Teknoloji ekibi liderliğini üstlendiğim Girişimcilik Topluluğu olarak yapay zeka temellerini ve ai araçları hakkında sunum yaptım.</p>
-                        <div class="project-tech">
-                            <span>Sunum</span>
-                            <span>AI</span>
-                        </div>
-                    </div>
-                </div>
-    </section>
-
- <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title" data-tr="İletişime Geçin" data-en="Get In Touch">İletişime Geçin</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4 data-tr="Adres" data-en="Address">Adres</h4>
-                            <p data-tr="İstanbul, Türkiye" data-en="Istanbul, Turkey">İstanbul, Türkiye</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4 data-tr="Telefon" data-en="Phone">Telefon</h4>
-                            <p>+90 537 490 60 08</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4 data-tr="E-posta" data-en="Email">E-posta</h4>
-                            <p>berhanoztrk@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3 data-tr="Berhan Öztürk" data-en="Berhan Ozturk">Berhan Öztürk</h3>
-                    <p data-tr="Elektrik-Elektronik Mühendisi" data-en="Electrical-Electronics Engineer">Elektrik-Elektronik Mühendisi</p>
-                </div>
-                
-            </div>
-            <div class="footer-bottom">
-                <p data-tr="&copy; 2025 Berhan Öztürk. Tüm hakları saklıdır." data-en="&copy; 2025 Berhan Ozturk. All rights reserved.">&copy; 2025 Berhan Öztürk. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var c = document.getElementById('scope'), ctx = c.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var freq = 1, t = 0, w, h, dpr = window.devicePixelRatio || 1;
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  function size(){w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    ctx.strokeStyle=css('--line');ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+    var cols=[css('--a'),css('--b'),css('--c')];
+    for(var p=0;p<3;p++){
+      ctx.strokeStyle=cols[p];ctx.lineWidth=2.5;ctx.beginPath();
+      for(var x=0;x<=w;x+=3){
+        var y=h/2-Math.sin((x/w)*Math.PI*4*freq - t - p*2*Math.PI/3)*(h*0.4);
+        x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+    }
+  }
+  function loop(){t+=0.04;draw();requestAnimationFrame(loop)}
+  c.parentNode.addEventListener('mousemove',function(e){
+    var r=c.getBoundingClientRect();freq=0.6+((e.clientX-r.left)/r.width)*1.6;if(reduce)draw();
+  });
+  window.addEventListener('resize',size);
+  size();
+  if(!reduce)loop();
+})();
+</script>
 </body>
 </html>

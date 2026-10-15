@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Berhan Öztürk — Elektrik-Elektronik Mühendisi</title>
+<meta name="description" content="Elektrik-elektronik mühendisi: endüstriyel pano tasarımı, PLC otomasyon, hidroelektrik santral işletme-bakım, SCADA ve güç elektroniği.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef2f4; --surface:#ffffff; --ink:#10263b; --muted:#4d6275; --line:#cfd9e0;
+  --a:#0f7c8a; --b:#e8a317; --c:#b4453a;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0b1623; --surface:#12243a; --ink:#e6eef5; --muted:#9bb0c2; --line:#25405c; --a:#4fc3d1; --b:#f0b73c; --c:#e07a6e;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:var(--a)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--b);outline-offset:3px}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;font-weight:500;flex-wrap:wrap;gap:8px}
+nav a{color:var(--ink);text-decoration:none;margin-left:20px}
+nav a:hover{color:var(--a)}
+nav .logo{font-family:var(--head);font-weight:700;font-size:1.1rem;margin:0}
+.hero{padding:36px 0 56px}
+h1{font-family:var(--head);font-weight:700;font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;margin:0 0 20px;letter-spacing:-.02em}
+.lead{font-size:1.2rem;max-width:36em;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:6px;font-weight:500;text-decoration:none;border:2px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--a)}
+.scope{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 8px}
+.scope canvas{width:100%;height:170px;display:block}
+.scope p{margin:6px 0 4px;font-size:.85rem;color:var(--muted)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--head);font-size:1.9rem;margin:0 0 24px;letter-spacing:-.01em}
+.about{max-width:38em}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px}
+.card h3{font-family:var(--head);margin:0 0 8px;font-size:1.2rem}
+.card p,.card li{color:var(--muted);font-size:.98rem}
+.card p{margin:0}
+.card ul{margin:0;padding-left:18px}
+.card.t1{border-top:4px solid var(--a)}
+.card.t2{border-top:4px solid var(--b)}
+.card.t3{border-top:4px solid var(--c)}
+.timeline{border-left:3px solid var(--line);margin:0;padding:0 0 0 24px;list-style:none}
+.timeline li{position:relative;padding-bottom:30px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-33px;top:7px;width:13px;height:13px;border-radius:50%;background:var(--a);border:3px solid var(--bg)}
+.timeline h3{font-family:var(--head);margin:0;font-size:1.2rem}
+.timeline .meta{margin:2px 0 8px;color:var(--muted);font-size:.92rem}
+.timeline ul{margin:0;padding-left:18px;max-width:46em}
+.timeline li li{padding:0 0 4px;color:var(--ink)}
+.timeline li li::before{display:none}
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none;margin:0 0 20px}
+.tags li{border:1px solid var(--line);background:var(--surface);padding:6px 14px;border-radius:99px;font-size:.95rem}
+.sub{font-family:var(--head);font-size:1.05rem;margin:22px 0 10px}
+.plain{margin:0;padding-left:18px}
+.plain li{margin-bottom:6px}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:.92rem}
+.contact a{display:inline-block;margin-right:20px;font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Ana menü">
+    <p class="logo">B. Öztürk</p>
+    <div><a href="#about">Hakkımda</a><a href="#experience">Deneyim</a><a href="#projects">Projeler</a><a href="#skills">Yetenekler</a><a href="#contact">İletişim</a><a href="index.html" hreflang="en" lang="en">EN</a></div>
+  </nav>
+
+  <header class="hero">
+    <h1>Berhan Öztürk<br>Elektrik-Elektronik Mühendisi</h1>
+    <p class="lead">Endüstriyel kontrol panoları tasarlıyor, makine ve otomasyon sistemlerini devreye alıyorum. Hidroelektrik santral işletmesi, SCADA ve güç elektroniği alanlarında da çalıştım.</p>
+    <div class="btns">
+      <a class="btn primary" href="#experience">Deneyimlerim</a>
+      <a class="btn" href="#contact">İletişime geç</a>
+    </div>
+    <div class="scope" aria-hidden="true">
+      <canvas id="scope"></canvas>
+      <p>Üç fazlı besleme, fazlar arası 120°. Frekansı değiştirmek için fareyi üzerinde gezdir.</p>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>Hakkımda</h2>
+    <div class="about">
+      <p>İstanbul'da yaşayan bir elektrik-elektronik mühendisiyim. AutoCAD ve EPLAN kullanarak endüstriyel fabrikalara kurulan makinelerin kablolama projelerini ve PLC kontrol panolarının elektrik projelerini hazırladım. Sahada devreye alma, makine bakımı ve arıza giderme deneyimim var.</p>
+      <p>2025'te Trakya Üniversitesi'nden mezun oldum. Güneş enerjisi santrallerine de ilgi duyuyorum ve yeni teknolojileri takip ederek kendimi sürekli geliştiriyorum.</p>
+    </div>
+  </section>
+
+  <section id="focus">
+    <h2>Üzerinde çalıştıklarım</h2>
+    <div class="grid">
+      <div class="card t1"><h3>Pano ve elektrik tasarımı</h3><p>EPLAN ve AutoCAD Electrical ile kontrol panoları, motor kablolama ve kablo tava çizimleri.</p></div>
+      <div class="card t2"><h3>Otomasyon ve devreye alma</h3><p>Delta PLC ve HMI tasarımı, anahtar teslim endüstriyel tesislerin devreye alınması ve bakımı.</p></div>
+      <div class="card t3"><h3>Enerji ve güç elektroniği</h3><p>SCADA ile hidroelektrik santral işletme-bakım, güneş enerjisi santrali çalışmaları ve flyback konvertör tasarımı.</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Deneyim</h2>
+    <ul class="timeline">
+      <li>
+        <h3>Elektrik-Elektronik Mühendisi, Multigrain A.S</h3>
+        <p class="meta">Eylül 2025 – Eylül 2026</p>
+        <ul>
+          <li>EPLAN kullanarak elektrik panosu süreçlerini yürüttüm.</li>
+          <li>AutoCAD ile saha tesisatı, motor kablolama ve kablo tava projelerinin çiziminde görev aldım.</li>
+          <li>Delta PLC kullanarak fabrika otomasyon sistemlerinin tasarımını ve devreye alınmasını gerçekleştirdim.</li>
+          <li>Anahtar teslim endüstriyel tesislerin elektrik sistemlerinin ve makinelerin devreye alınmasında rol aldım.</li>
+          <li>Makinelerin periyodik bakım ve arıza giderme (işletme-bakım / teknik servis) faaliyetlerini yürüttüm.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Mühendislik Stajyeri, Mutlusan (Ar-Ge donanım tasarımı)</h3>
+        <p class="meta">Haziran 2025 – Temmuz 2025</p>
+        <ul>
+          <li>Ar-Ge biriminin donanım tasarım departmanında zorunlu yaz stajımı tamamladım.</li>
+          <li>Hesaplamalara dikkat ederek bir flyback konvertör devresi tasarladım ve komponent seçimini yaptım.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Kurucu Ortak, Behoove Technology</h3>
+        <p class="meta">Ocak 2024 – Nisan 2025</p>
+        <ul>
+          <li>Otonom teslimat teknolojileri geliştiren beş kişilik bir girişim ekibinin kurucu ortağı oldum.</li>
+          <li>Elektronik sistemlerin geliştirilmesinden sorumluydum: sensör entegrasyonu, güç yönetimi ve mikrodenetleyici tabanlı kontrol devreleri.</li>
+        </ul>
+      </li>
+      <li>
+        <h3>Mühendislik Stajyeri, Akenerji Uluabat Hidroelektrik Santrali</h3>
+        <p class="meta">Ağustos 2024 – Eylül 2024</p>
+        <ul>
+          <li>İşletme ve bakım (O&amp;M) kapsamında enerji üretimi ve şalt sahası kontrolü üzerine saha gözlemleri yaptım.</li>
+          <li>SCADA sistemleri üzerinden yürütülen günlük üretim analizlerine, bakım faaliyetlerine ve izleme operasyonlarına aktif olarak katıldım.</li>
+          <li>Teknik ekibe ekipman bakımında destek oldum.</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projeler</h2>
+    <div class="grid">
+      <div class="card t3"><h3>Evrensel girişli flyback SMPS</h3><p>85–265 V AC evrensel girişli, 24 V 2,5 A çıkışlı SMPS flyback konvertör devresi.</p></div>
+      <div class="card t2"><h3>Güneş enerjili taşınabilir şarj cihazı</h3><p>ASES Uluslararası Akademik Araştırma Kongresi 2025'te sunulan güneş enerjili taşınabilir şarj cihazı uygulaması.</p></div>
+      <div class="card t1"><h3>Uzay tabanlı güneş enerjisi</h3><p>Uzay tabanlı güneş enerji santrallerinin çalışma prensipleri ve faydaları üzerine çalışma.</p></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Yetenekler, eğitim ve daha fazlası</h2>
+    <p class="sub">Araçlar ve yetenekler</p>
+    <ul class="tags">
+      <li>EPLAN</li><li>AutoCAD Electrical</li><li>ETAP</li><li>Delta PLC</li><li>HMI tasarımı</li><li>Devreye alma</li><li>Arıza teşhisi</li><li>Bakım</li><li>SCADA</li><li>Türkçe (anadil)</li><li>İngilizce (B2)</li>
+    </ul>
+    <p class="sub">Eğitim</p>
+    <ul class="plain"><li>Trakya Üniversitesi, Elektrik-Elektronik Mühendisliği lisans, 2020 – 2025 (GPA 3,05/4,00)</li></ul>
+    <p class="sub">Sertifikalar ve kurslar</p>
+    <ul class="plain">
+      <li>Ultimate Electrical Power System Engineering Masterclass (Udemy)</li>
+      <li>Sıfırdan 1 MW Güneş Enerjisi Santrali Kurulumu (Udemy)</li>
+      <li>A-Z GES Proje Çizimi Eğitimi (Udemy)</li>
+      <li>Networking Basics (Cisco)</li>
+    </ul>
+    <p class="sub">Gönüllü çalışmalar</p>
+    <ul class="plain">
+      <li>Trakya Üniversitesi IEEE TAES İnsansız Hava Aracı ekibi: haberleşme sistemleri ve aviyonik sorumlusu</li>
+      <li>Trakya Üniversitesi Derin Öğrenme ve IoT Topluluğu: başkan yardımcısı, robotik kodlama eğitmeni</li>
+      <li>Trakya Üniversitesi Girişimcilik Topluluğu: teknoloji ve Ar-Ge takım lideri</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>İletişim</h2>
+    <p class="contact">
+      <a href="mailto:berhanoztrk@gmail.com">berhanoztrk@gmail.com</a>
+      <a href="https://www.linkedin.com/in/berhanozturk" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/berhanozturk" rel="noopener">GitHub</a>
+    </p>
+  </section>
+
+  <footer>© <span id="yr"></span> Berhan Öztürk · İstanbul, Türkiye</footer>
+</div>
+
+<script>
+document.getElementById('yr').textContent = new Date().getFullYear();
+(function(){
+  var c = document.getElementById('scope'), ctx = c.getContext('2d');
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var freq = 1, t = 0, w, h, dpr = window.devicePixelRatio || 1;
+  function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+  function size(){w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+  function draw(){
+    ctx.clearRect(0,0,w,h);
+    ctx.strokeStyle=css('--line');ctx.lineWidth=1;
+    ctx.beginPath();ctx.moveTo(0,h/2);ctx.lineTo(w,h/2);ctx.stroke();
+    var cols=[css('--a'),css('--b'),css('--c')];
+    for(var p=0;p<3;p++){
+      ctx.strokeStyle=cols[p];ctx.lineWidth=2.5;ctx.beginPath();
+      for(var x=0;x<=w;x+=3){
+        var y=h/2-Math.sin((x/w)*Math.PI*4*freq - t - p*2*Math.PI/3)*(h*0.4);
+        x===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+      }
+      ctx.stroke();
+    }
+  }
+  function loop(){t+=0.04;draw();requestAnimationFrame(loop)}
+  c.parentNode.addEventListener('mousemove',function(e){
+    var r=c.getBoundingClientRect();freq=0.6+((e.clientX-r.left)/r.width)*1.6;if(reduce)draw();
+  });
+  window.addEventListener('resize',size);
+  size();
+  if(!reduce)loop();
+})();
+</script>
+</body>
+</html>
